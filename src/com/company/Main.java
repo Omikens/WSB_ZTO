@@ -19,5 +19,13 @@ public class Main {
         dog.feed();
         dog.feed();
         System.out.println("doggo w " + dog.getWeight());
+
+        Human me = new Human("Dawid", "Szablowski");
+        System.out.println(me.getWeight());
+        System.out.println(me.name);
+
+        Car mineCar = new Car("A6", "Audi", 2000.0, me);
+
+        System.out.println(mineCar.owner.firstName + " " + mineCar.producer);
     }
 }
