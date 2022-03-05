@@ -7,6 +7,8 @@ public class Human extends Animal{
 
     private double salary;
 
+    Car car;
+
     Human(String firstName, String lastName) {
         super("homo sapiens", firstName + " " + lastName);
         this.firstName = firstName;
@@ -24,5 +26,14 @@ public class Human extends Animal{
             System.out.println("Wysłano nowe dane dotyczacy wypłaty");
         }
         else {System.out.println("mniej niz zero");}
+    }
+
+    public void setIsCarAffordable(Car mineCar){
+        if (this.salary > mineCar.price){
+            this.car = mineCar;
+        } else if (this.salary > mineCar.price/12){
+            System.out.println("Na raty");
+        }
+        else {System.out.println("Nie stac na zakup");}
     }
 }

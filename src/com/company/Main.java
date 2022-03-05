@@ -24,11 +24,15 @@ public class Main {
         System.out.println(me.getWeight());
         System.out.println(me.name);
 
-        me.setSalary(30.0);
+        me.setSalary(3000.0);
         System.out.println("Moja wypłata: " + me.getSalary());
 
         Car mineCar = new Car("A6", "Audi", 2000.0, me);
 
         System.out.println(mineCar.owner.firstName + " " + mineCar.producer);
+
+        me.setIsCarAffordable(mineCar);
+
+        System.out.println(mineCar.owner.firstName + " " + me.car.model);
     }
 }
