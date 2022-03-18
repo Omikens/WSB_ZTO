@@ -34,5 +34,16 @@ public class Main {
         me.setIsCarAffordable(mineCar);
 
         System.out.println(mineCar.owner.firstName + " " + me.car.model);
+
+        //TASK 6
+        System.out.println(new Car("A6", "Audi", 2000.0, me)
+                .equals(new Car("A4", "Audi", 1000.0, me)));
+
+        System.out.println(new Car("A6", "Audi", 2000.0, me)
+                .equals(new Car("A6", "Audi", 2000.0, me)));
+
+        System.out.println(mineCar);
+
     }
+
 }

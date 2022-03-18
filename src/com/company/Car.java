@@ -18,4 +18,9 @@ public class Car {
         this.price = price;
         this.owner = owner;
     }
+
+    //TASK 6
+    public String toString(){//overriding the toString() method
+        return model+" "+producer+" "+price+" "+owner;
+    }
 }
