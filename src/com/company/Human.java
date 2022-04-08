@@ -7,7 +7,11 @@ public class Human extends Animal{
     public String firstName;
     public String lastName;
 
+
+    public Double cash;
+
     private double salary;
+    private double animal;
 
     Car car;
 

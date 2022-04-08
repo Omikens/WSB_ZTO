@@ -1,6 +1,6 @@
 package com.company;
 
-public class Animal {
+public class Animal implements Salleable {
     private static final Double DEFAULT_DOG_WEIGHT = 2.0;
     private static final Double DEFAULT_CAT_WEIGHT = 1.0;
     private static final Double DEFAULT_ANIMAL_WEIGHT = 0.5;
@@ -16,6 +16,7 @@ public class Animal {
         this.alive = true;
         this.species = species;
         this.name = name;
+
         if (species.equals("canis")) {
             this.weight = DEFAULT_DOG_WEIGHT;
         } else if (species.equals("felis")) {
@@ -34,4 +35,8 @@ public class Animal {
         System.out.println("food");
     }
 
+    @Override
+    public void Sell(Human seller, Human buyer, Double price) {
+        System.out.println("Czy seller ma zwierzaka?: " + seller.getSalary());
+    }
 }

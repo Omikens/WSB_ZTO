@@ -7,6 +7,12 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello, animals!");
 
+        Human me = new Human("Dawid", "Szablowski");
+        me.setSalary(3000.0);
+
+        Human random1 = new Human("Jan", "Janowicz");
+        random1.setSalary(2000.0);
+
         Animal dog = new Animal("canis","Szarik");
 
 //        Animal dog = new Animal();
@@ -22,11 +28,11 @@ public class Main {
         dog.feed();
         System.out.println("doggo w " + dog.getWeight());
 
-        Human me = new Human("Dawid", "Szablowski");
+
         System.out.println(me.getWeight());
         System.out.println(me.name);
 
-        me.setSalary(3000.0);
+
         System.out.println("Moja wypłata: " + me.getSalary());
 
         Car mineCar = new Car("A6", "Audi", 2000.0, me);
@@ -44,7 +50,12 @@ public class Main {
         System.out.println(new Car("A6", "Audi", 2000.0, me)
                 .equals(new Car("A6", "Audi", 2000.0, me)));
 
-        System.out.println(mineCar);
+        System.out.println(me.firstName);
+
+        //TASK 8
+        Animal cat1 = new Animal("canis", "Kicia");
+
+        mineCar.Sell(me, random1, 300.0);
 
     }
 

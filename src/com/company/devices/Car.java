@@ -1,10 +1,11 @@
 package com.company.devices;
 
 import com.company.Human;
+import com.company.Salleable;
 
 import java.lang.reflect.Array;
 
-public class Car extends Device{
+public class Car extends Device implements Salleable {
 
     public String model;
     public String producer;
@@ -31,5 +32,13 @@ public class Car extends Device{
     //TASK 6
     public String toString(){//overriding the toString() method
         return model+" "+producer+" "+price+" "+owner;
+    }
+
+    @Override
+    public void Sell(Human seller, Human buyer, Double price) {
+        System.out.println("Sell salary: " + seller.getSalary());
+        System.out.println("Buyer salary: " + buyer.getSalary());
+        System.out.println("Buyer salary: " + buyer.getSalary());
+        System.out.println("Sprzedano auto");
     }
 }
