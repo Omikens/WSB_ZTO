@@ -24,9 +24,9 @@ public class Main {
 //        dog.name = "Burek";
         System.out.println(dog.name);
         System.out.println("doggo w " + dog.getWeight());
-        dog.feed();
-        dog.feed();
-        dog.feed();
+        dog.feed(3.0, Animal.FoodType.MEET);
+        dog.feed(1.0, Animal.FoodType.ALL);
+        dog.feed(2.0, Animal.FoodType.CROPS);
         System.out.println("doggo w " + dog.getWeight());
 
 

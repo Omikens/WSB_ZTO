@@ -1,6 +1,21 @@
 package com.company;
 
 public class Animal implements Salleable {
+
+    private static final Double DEFAULT_COW_WEIGHT = 5.0;
+
+    public enum FoodType{
+        MEET(0.7),
+        CROPS(0.3),
+        ALL(0.5);
+
+        final Double foodBodyRatio;
+
+        FoodType(Double foodBodyRatio){
+            this.foodBodyRatio = foodBodyRatio;
+        }
+    }
+
     private static final Double DEFAULT_DOG_WEIGHT = 2.0;
     private static final Double DEFAULT_CAT_WEIGHT = 1.0;
     private static final Double DEFAULT_ANIMAL_WEIGHT = 0.5;
@@ -8,7 +23,7 @@ public class Animal implements Salleable {
     String name;
     Integer age;
     private Double weight;
-    //Boolean alive;
+    public final FoodType foodType;
 
     private Boolean alive;
 
@@ -18,11 +33,17 @@ public class Animal implements Salleable {
         this.name = name;
 
         if (species.equals("canis")) {
+            this.foodType = FoodType.ALL;
             this.weight = DEFAULT_DOG_WEIGHT;
         } else if (species.equals("felis")) {
+            this.foodType = FoodType.MEET;
             this.weight = DEFAULT_CAT_WEIGHT;
+        }    else if (species.equals("cow")) {
+            this.foodType = FoodType.CROPS;
+            this.weight = DEFAULT_COW_WEIGHT;
         } else {
             this.weight = DEFAULT_ANIMAL_WEIGHT;
+            this.foodType = FoodType.ALL;
         }
     }
 
@@ -30,9 +51,13 @@ public class Animal implements Salleable {
         return this.weight;
     }
 
-    public void feed(){
-        this.weight += 0.1;
-        System.out.println("food");
+    public void feed(Double foodWeight, FoodType foodType){
+        switch (foodType){
+            case ALL: this.weight += FoodType.ALL.foodBodyRatio * foodWeight; break;
+            case MEET: this.weight += FoodType.MEET.foodBodyRatio * foodWeight; break;
+            case CROPS: this.weight += FoodType.CROPS.foodBodyRatio * foodWeight; break;
+        }
+        System.out.println("thx for food");
     }
 
     @Override
