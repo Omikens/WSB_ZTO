@@ -64,6 +64,10 @@ public class Main {
         Phone nokia = new Phone();
         nokia.operationSystem = Phone.OperationSystem.WINDOWS_MOBILE;
 
+
+        System.out.println(Country.POLAND.gdpInPLN());
+        System.out.println(Country.POLAND.language);
+        System.out.println(Country.POLAND.code);
     }
 
 }
