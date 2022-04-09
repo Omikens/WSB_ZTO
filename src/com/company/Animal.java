@@ -4,18 +4,6 @@ public class Animal implements Salleable {
 
     private static final Double DEFAULT_COW_WEIGHT = 5.0;
 
-    public enum FoodType{
-        MEET(0.7),
-        CROPS(0.3),
-        ALL(0.5);
-
-        final Double foodBodyRatio;
-
-        FoodType(Double foodBodyRatio){
-            this.foodBodyRatio = foodBodyRatio;
-        }
-    }
-
     private static final Double DEFAULT_DOG_WEIGHT = 2.0;
     private static final Double DEFAULT_CAT_WEIGHT = 1.0;
     private static final Double DEFAULT_ANIMAL_WEIGHT = 0.5;
