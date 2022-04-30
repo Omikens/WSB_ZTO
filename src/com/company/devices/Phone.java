@@ -16,4 +16,13 @@ public class Phone extends Device{
         System.out.println("czekam");
         System.out.println("widzę jabłko");
     }
+
+    public void installAnApp(String appName){
+        System.out.println("instaluje" + appName);
+    }
+
+    public void installAnApp(String appName, String appVersion){
+        System.out.println("instaluje" + appName + appVersion);
+    }
+
 }
