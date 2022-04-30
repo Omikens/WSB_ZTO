@@ -1,5 +1,7 @@
 package com.company;
 
+import com.company.creatures.Animal;
+import com.company.creatures.FoodType;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 

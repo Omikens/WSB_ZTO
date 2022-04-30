@@ -1,4 +1,4 @@
-package com.company;
+package com.company.creatures;
 
 public enum FoodType {
     MEET(0.7),

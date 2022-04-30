@@ -1,4 +1,6 @@
-package com.company;
+package com.company.creatures;
+
+import com.company.Human;
 
 public class Animal implements Salleable {
 
@@ -8,14 +10,14 @@ public class Animal implements Salleable {
     private static final Double DEFAULT_CAT_WEIGHT = 1.0;
     private static final Double DEFAULT_ANIMAL_WEIGHT = 0.5;
     final String species;
-    String name;
+    public String name;
     Integer age;
     private Double weight;
     public final FoodType foodType;
 
     private Boolean alive;
 
-    Animal(String species, String name){
+    public Animal(String species, String name){
         this.alive = true;
         this.species = species;
         this.name = name;

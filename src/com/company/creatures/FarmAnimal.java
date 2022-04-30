@@ -1,4 +1,6 @@
-package com.company;
+package com.company.creatures;
+
+import com.company.Human;
 
 public class FarmAnimal extends Animal implements Edible{
     FarmAnimal(String species, String name) {

@@ -1,9 +1,7 @@
 package com.company.devices;
 
 import com.company.Human;
-import com.company.Salleable;
-
-import java.lang.reflect.Array;
+import com.company.creatures.Salleable;
 
 public class Car extends Device implements Salleable {
 
