@@ -16,7 +16,17 @@ public class Main {
         Human random1 = new Human("Jan", "Janowicz");
         random1.setSalary(2000.0);
 
-        Animal dog = new Animal("canis","Szarik");
+        Animal dog = new Animal("canis", "Szarik") {
+            @Override
+            public void feed(Animal animal, FoodType foodType) {
+
+            }
+
+            @Override
+            public void feed(Animal foodWeight) {
+
+            }
+        };
 
 //        Animal dog = new Animal();
 //        dog.species = "canis";
@@ -56,7 +66,17 @@ public class Main {
         System.out.println(me.firstName);
 
         //TASK 8
-        Animal cat1 = new Animal("canis", "Kicia");
+        Animal cat1 = new Animal("canis", "Kicia") {
+            @Override
+            public void feed(Animal animal, FoodType foodType) {
+
+            }
+
+            @Override
+            public void feed(Animal foodWeight) {
+
+            }
+        };
 
         mineCar.Sell(me, random1, 300.0);
 

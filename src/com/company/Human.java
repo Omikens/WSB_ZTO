@@ -1,6 +1,7 @@
 package com.company;
 
 import com.company.creatures.Animal;
+import com.company.creatures.FoodType;
 import com.company.devices.Car;
 
 public class Human extends Animal {
@@ -42,5 +43,15 @@ public class Human extends Animal {
             System.out.println("Na raty");
         }
         else {System.out.println("Nie stac na zakup");}
+    }
+
+    @Override
+    public void feed(Animal animal, FoodType foodType) {
+
+    }
+
+    @Override
+    public void feed(Animal foodWeight) {
+
     }
 }

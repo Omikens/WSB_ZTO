@@ -11,4 +11,14 @@ public class FarmAnimal extends Animal implements Edible{
     public void beEaten(Human seller, Human buyer, Double price) {
 
     }
+
+    @Override
+    public void feed(Animal animal, FoodType foodType) {
+
+    }
+
+    @Override
+    public void feed(Animal foodWeight) {
+
+    }
 }

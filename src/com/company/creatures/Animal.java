@@ -2,7 +2,7 @@ package com.company.creatures;
 
 import com.company.Human;
 
-public class Animal implements Salleable {
+public abstract class Animal implements Salleable, Feedable {
 
     private static final Double DEFAULT_COW_WEIGHT = 5.0;
 
