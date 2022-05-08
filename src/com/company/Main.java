@@ -8,13 +8,15 @@ import com.company.devices.Phone;
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Hello, animals!");
+        System.out.println("(Zadanie 1) " + "Hello, animals!");
 
         Human me = new Human("Dawid", "Szablowski");
         me.setSalary(3000.0);
 
         Human random1 = new Human("Jan", "Janowicz");
         random1.setSalary(2000.0);
+
+        System.out.println("Moja wypłata: " + me.getSalary());
 
         Animal dog = new Animal("canis", "Szarik") {
             @Override
@@ -28,29 +30,20 @@ public class Main {
             }
         };
 
-//        Animal dog = new Animal();
-//        dog.species = "canis";
-//        dog.alive = true;
-//        dog.age = 7;
-//        dog.weight = 24.0;
-//        dog.name = "Burek";
         System.out.println(dog.name);
-        System.out.println("doggo w " + dog.getWeight());
+        System.out.println("Sprawdzam wagę Psa przed karmieniem: " + dog.getWeight());
         dog.feed(3.0, FoodType.MEET);
         dog.feed(1.0, FoodType.ALL);
         dog.feed(2.0, FoodType.CROPS);
-        System.out.println("doggo w " + dog.getWeight());
+        System.out.println("Sprawdzam wagę Psa po karmieniu: " + dog.getWeight());
 
 
-        System.out.println(me.getWeight());
-        System.out.println(me.name);
-
-
-        System.out.println("Moja wypłata: " + me.getSalary());
+        System.out.println("Moja waga: "+me.getWeight());
+        System.out.println("Moje Imie: "+me.name);
 
         Car mineCar = new Car("A6", "Audi", 2000.0, me);
 
-        System.out.println(mineCar.owner.firstName + " " + mineCar.producer);
+        System.out.println("Właściciel auta: "+mineCar.owner.firstName + " Producent auta: " + mineCar.producer);
 
         me.setIsCarAffordable(mineCar);
 
@@ -80,16 +73,16 @@ public class Main {
 
         mineCar.Sell(me, random1, 300.0);
 
-
-
         //TASK 1
         Phone nokia = new Phone();
         nokia.operationSystem = Phone.OperationSystem.WINDOWS_MOBILE;
 
 
-        System.out.println(Country.POLAND.gdpInPLN());
-        System.out.println(Country.POLAND.language);
-        System.out.println(Country.POLAND.code);
+        System.out.println("GDP Polski: "+Country.POLAND.gdpInPLN());
+        System.out.println("Jezyk: "+Country.POLAND.language);
+        System.out.println("Code: "+Country.POLAND.code);
+
+        mineCar.refuel();
     }
 
 }

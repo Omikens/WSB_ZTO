@@ -24,14 +24,14 @@ public class Human extends Animal {
     }
 
     public Double getSalary(){
-        System.out.println("Pobrano informacje o Twojej wypłatcie " + salary);
+        System.out.println("(Zadanie 3 & 4:) " + "Pobrano informacje o Twojej wypłatcie: " + salary);
         return salary;
     }
 
     public void setSalary(double salary){
         if (salary >= 0){
             this.salary = salary;
-            System.out.println("Wysłano nowe dane dotyczacy wypłaty");
+            System.out.println("(Zadanie 3 & 4:) " + "Wysłano nowe dane dotyczace wypłaty: " + this.salary);
         }
         else {System.out.println("mniej niz zero");}
     }

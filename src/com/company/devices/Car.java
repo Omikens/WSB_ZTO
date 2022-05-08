@@ -10,6 +10,8 @@ public class Car extends Device implements Salleable {
 
     public double price;
 
+    public double fuelLevel = 80.0;
+
     public Human owner;
 
 
@@ -18,6 +20,12 @@ public class Car extends Device implements Salleable {
         this.producer = producer;
         this.price = price;
         this.owner = owner;
+    }
+
+    public double refuel(){
+        fuelLevel = 80.0;
+        System.out.println("Samochód zatankowany do: " + this.fuelLevel);
+        return fuelLevel;
     }
 
     @Override

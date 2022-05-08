@@ -47,11 +47,11 @@ public abstract class Animal implements Salleable, Feedable {
             case MEET: this.weight += FoodType.MEET.foodBodyRatio * foodWeight; break;
             case CROPS: this.weight += FoodType.CROPS.foodBodyRatio * foodWeight; break;
         }
-        System.out.println("thx for food");
+        System.out.println("(Zadanie 1) Zwierze zostało nakarmione, waga jedzenia - " + foodWeight);
     }
 
     @Override
     public void Sell(Human seller, Human buyer, Double price) {
-        System.out.println("Czy seller ma zwierzaka?: " + seller.getSalary());
+        System.out.println("(Zadanie 8) Czy seller ma zwierzaka?: " + seller.getSalary());
     }
 }
